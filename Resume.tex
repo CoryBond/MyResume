@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cory's Resume
+% LaTeX Based Resume
+% Version 0.9 (12/28/2020)
+%
+% The template originally used for this resume was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Template Author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,12pt]{memoir} % Font and paper size
+
+ \input{structure.tex} % Include the file specifying document layout and packages
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION 
+%----------------------------------------------------------------------------------------
+
+\userinformation{ % Set the content that goes into the sidebar of each page
+
+% To this page only, add a background that fills have the page (from the top)
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \color{sidecolor}%
+    \rule{.26\paperwidth}{\paperheight}%
+  }%
+}%
+
+\begin{flushright}
+\textbf{Cory H. Bond} \\ 
+
+\small % Smaller font size
+\link{www.corybond.me}{www.corybond.me} \faLink\\ 
+cb.cobond@gmail \faEnvelope\\
+\link{https://github.com/CoryBond}{@CoryBond} \faGithub\\
+\link{https://www.linkedin.com/in/cory-h-bond/}{cory-h-bond} \faLinkedin\\ 
+(845)-490-3907 \faPhoneSquare\\ 
+
+\Sep % Some whitespace
+\textbf{Address} \\
+35 Eastern Parkway \\ 
+Brooklyn, NY, 11238 \\ 
+
+\Sep % Some whitespace
+\textbf{Education} \\
+SUNY Binghamton \\
+Computer Science B.S \\
+(Dec 2013) \\
+
+\Sep % Some whitespace
+\textbf{Software Skills} \\
+\Sep % Some whitespace
+{\begin{tabularx}{\linewidth}{@{}ll}
+Javascript & \color{RoyalBlue} Proficient\\
+Typescript & \color{RoyalBlue} Proficient\\
+Java & \color{RoyalBlue} Proficient\\
+Python & Fair\\
+ & \\
+React & \color{RoyalBlue} Proficient \\
+Lerna & \color{RoyalBlue} Proficient \\
+Pandas & Fair \\
+Docker & Fair \\
+\end{tabularx}}
+
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % Print your information in the left column
+
+\framebreak % End of the first column
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+
+\cvheading{Cory Bond} % Large heading - your name
+
+\cvsubheading{Software Developer} % Subheading - your occupation/specialization
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\importantText{About Me}{I am a detail oriented professional with 6 years of experience and a proven track record of software design, teamwork and leadership. I have experience working in both server and UI systems which make me a fairly reliable full-stack developer.}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\CVSection{Experience}
+
+%------------------------------------------------
+
+\CVItem{Aug 2017 - present, \textit{Senior Software Developer}, ActiveViam}{
+\begin{itemize}
+	\item Successfully Consulted and built POC's for clients who would then purchase and build on top of the consulted work.
+	\item Improved our analytic engine projects either by adding new features or optimized data structures used. 
+	\item Led team projects on streamline UI libraries easing development for our various sdks.
+	\item Trained international clients as the lead developer and trainer of company UI training course.
+	\item Wrote UI and server modules used in company fintech and retail products which provide new data visualizations and controls for client data.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Feb 2014 - Aug 2017, \textit{Software Developer}, Citigroup}{
+\begin{itemize}
+	\item Illustrated the benefits of using JS over C\# for company UI's by building a POC which mimicked the behavior and style of C\# based code. 
+	\item Improved system debugging by building an analytics pipeline which recorded the lifecycle of 100,000 trades in our system daily.
+	\item Helped admins manage their employees by building the server side portion of a PDF generator which displayed employee statistics.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%   
+%   When listing out projects try to make sure you can answer each of the below topics for
+%   each project:
+%
+%   +----------------------------------+---------+
+%   |               Topic              |  Answer |
+%   +----------------------------------+---------+
+%   | Challenges                       |         |
+%   | Mistakes/Failures                |         |
+%   | Enjoyed                          |         |
+%   | Leadership                       |         |
+%   | Conflicts                        |         |
+%   | What You'd Do Differently        |         |
+%   +----------------------------------+---------+
+% 
+% For bullet points here use:
+% "Accomplished X by implementing Y resulting in Z"
+% or??
+% "Acomplished X by implementing Y"
+%----------------------------------------------------------------------------------------
+
+\CVSection{Projects}
+
+%------------------------------------------------
+
+\CVItem{Retail POC}{
+%   +----------------------------------+---------+
+%   |               Topic              |  Answer |
+%   +----------------------------------+---------+
+%   | Challenges                       |         |
+%   | Mistakes/Failures                |         |
+%   | Enjoyed                          |         |
+%   | Leadership                       |         |
+%   | Conflicts                        |         |
+%   | What You'd Do Differently        |         |
+%   +----------------------------------+---------+
+\begin{itemize}
+	\item Enriched demos of POC by designing and building new retail modules which added workflow stories to the POC.
+	\item Improved maintainability of POC by refactoring the codebase, adding code styling standards and documenting coding practices.
+	\item Eased management of releases by containerizing several sub-projects and building docker compose scripts for sales force machines.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\CVItem{Fintech UI SDK}{
+%   +----------------------------------+---------+
+%   |               Topic              |  Answer |
+%   +----------------------------------+---------+
+%   | Challenges                       | Our Fintech UI's had no standard way of integration into client projects. Often UI's needed to be used together and we provided no mechanism to do this. Prior to this project we suggest clients build the combined UI's themselves based on bootstrap projects from the several UI's we do provide.        |
+%   | Mistakes/Failures                |  Tried to consume react contexts with 
+%                                          providers in different imported libraries       |
+%   | Enjoyed                          |  The oppurtunity to design a major project in the company. Lerning about Monorepo design.       |
+%   | Leadership                       | Assisted by a college graduate and helped plan out his tasks. Made sure he was on track and if he was facing any challenges.        |
+%   | Conflicts                        | Figuring out how to implement a release cycle for UI's used in a single repo.        |
+%   | What You'd Do Differently        | Instead of trying to use branches for releases per project (for safety purpose) instead we would use tags?        |
+%   +----------------------------------+---------+
+\begin{itemize}
+	\item Eased multi-UI integration for clients by building merging functions for widgets and configurations which can be used independent or auto-merged in a single component.
+	\item Simplified client projects by building a single scaffolding component which reduced UI projects down to a source file.
+	\item Solved UI code duplication, discovery, testing and scaling issues by designing a lerna organized monorepo which all fintech teams now use.
+\end{itemize}
+}
+
+%------------------------------------------------
+
+\Sep % Extra whitespace after the end of a major section
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE DELIMITER
+%	Place this block wherever you would like the content of your CV to go onto the next page
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+% NOTE: Uncomment out the next few lines if you want to make a multi-page resume.
+%\userinformation % Print your information in the left column
+%
+%\framebreak % End of the first column
+
+\end{document}
